@@ -3,7 +3,7 @@
 
 ## 添加依赖
     implementation 'com.kdp:permission:1.0.0'
-## 从1.0.1版本开始支持Androidx
+## 从1.1.0版本开始支持Androidx
     implementation 'com.kdp:permission:1.1.0'
 ## 简单使用
 
