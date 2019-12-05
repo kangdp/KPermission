@@ -1,5 +1,22 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
+
+publish {
+    def bintrayPro = buildBintrayPro()
+    userOrg = bintrayPro['USER_ORG']
+    repoName = bintrayPro['REPO_NAME']
+    groupId = bintrayPro['GROUP_ID']
+    artifactId = bintrayPro['ARTIFACT_ID']
+    publishVersion = bintrayPro['PUBLISH_VERSION']
+    desc = bintrayPro['DESC']
+    website = bintrayPro['WEB_SITE']
+}
+def buildBintrayPro() {
+    def buildProperties = new Properties()
+    buildProperties.load(new FileInputStream(file("../local.properties")))
+    return buildProperties
+}
 android {
     compileSdkVersion rootProject.compileSdkVersion
 
@@ -7,7 +24,7 @@ android {
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
 
     buildTypes {
@@ -21,5 +38,4 @@ android {
 
 dependencies {
     compileOnly 'com.android.support:appcompat-v7:28.0.0'
-
 }
