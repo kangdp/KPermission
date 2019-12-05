@@ -10,7 +10,9 @@
 - 请求单个或多个权限并返回请求结果
 
       private fun requestAllPermission(){
-
+        //实例化KPermission
+        val kPermission = KPermission(this)
+        //申请权限
         kPermission.request(Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE)
             .execute {
