@@ -1,4 +1,4 @@
-package com.common.lib.permission;
+package com.kdp.permission;
 
 import android.annotation.TargetApi;
 import android.content.pm.PackageManager;

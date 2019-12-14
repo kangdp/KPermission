@@ -33,7 +33,7 @@ allprojects {
         google()
         jcenter()
         //审核通过后可以去掉
-        maven {url 'https://dl.bintray.com/kangdongpu/android/'}
+//        maven {url 'https://dl.bintray.com/kangdongpu/android/'}
     }
 }
 

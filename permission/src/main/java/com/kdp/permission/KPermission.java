@@ -1,4 +1,4 @@
-package com.common.lib.permission;
+package com.kdp.permission;
 import android.os.Build;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentManager;
 
 import java.util.Arrays;
 
-import static com.common.lib.permission.KPermissionFragment.*;
+import static com.kdp.permission.KPermissionFragment.*;
 
 /***
  * @author kdp
