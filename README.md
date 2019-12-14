@@ -2,7 +2,7 @@
 一个使用简单的权限库
 
 ## 添加依赖
-    implementation 'com.kdp:permission:1.0.1'
+    implementation 'com.kdp:permission:1.0.0'
 ## 从1.1.0版本开始支持Androidx
     implementation 'com.kdp:permission:1.1.1'
 ## 简单使用
