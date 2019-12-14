@@ -67,6 +67,10 @@
             }
       }
       
+## 混淆
+
+-keep class com.common.lib.permission.**{*;}
+      
 
 ## LICENSE
 
