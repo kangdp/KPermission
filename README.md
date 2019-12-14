@@ -66,7 +66,10 @@
                 }
             }
       }
-      
+
+## 混淆
+
+    -keep class com.kdp.permission.**{*;}
 
 ## LICENSE
 
