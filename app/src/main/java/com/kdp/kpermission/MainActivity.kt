@@ -47,13 +47,16 @@ class MainActivity : AppCompatActivity() {
      */
     private fun requestAllPermission(){
 
-        kPermission.request(Manifest.permission.READ_EXTERNAL_STORAGE,
+        kPermission.request(
+            Manifest.permission.CAMERA,
+            Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE)
             .execute {
                     permission ->
                 // name: 所有请求的权限
                 // isGrant: 只要有一个权限被拒绝， 都返回false,否则返回true
-                // isShouldShowRequestPermission都返回false: 只要有一个权限被拒绝且选择了【不在询问】选项，都返回false,否则返回true
+                // isShouldShowRequestPermission: 只要有一个权限被拒绝且没有选择【不在询问】选项，都返回true,否则返回false
+
                 when {
                     permission.isGrant -> logger("你已经获取了${permission.name}权限")
                     permission.isShouldShowRequestPermission -> {
