@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
-import com.common.lib.permission.KPermission
+import com.kdp.permission.KPermission
 
 class MainActivity : AppCompatActivity() {
     private lateinit var kPermission: KPermission
