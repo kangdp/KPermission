@@ -19,7 +19,7 @@
                     permission ->
                 // name: 所有请求的权限
                 // isGrant: 只要有一个权限被拒绝， 都返回false,否则返回true
-                // isShouldShowRequestPermission都返回false: 只要有一个权限被拒绝且选择了【不在询问】选项，都返回false,否则返回true
+                // isShouldShowRequestPermission: 只要有一个权限被拒绝且没有选中【不在询问】，都返回true，否则返回false
                 when {
                     permission.isGrant -> logger("你已经获取了${permission.name}权限")
                     permission.isShouldShowRequestPermission -> {

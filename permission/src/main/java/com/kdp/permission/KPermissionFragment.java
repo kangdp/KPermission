@@ -55,7 +55,8 @@ public class KPermissionFragment extends Fragment {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == PERMISSION_REQUEST_CODE && permissionsCallback != null){
             if (PERMISSION == ALL_PERMISSION){
-                permissionsCallback.onResult(new Permission(Arrays.toString(permissions),checkApplyPermission(grantResults),shouldShowRequestPermission(permissions)));
+                boolean isAllGrant = checkApplyPermission(grantResults);
+                permissionsCallback.onResult(new Permission(Arrays.toString(permissions),isAllGrant,shouldShowRequestPermission(permissions,isAllGrant)));
             }else {
                 for (int i = 0; i < permissions.length; i++) {
                     permissionsCallback.onResult(new Permission(permissions[i],grantResults[i] == PackageManager.PERMISSION_GRANTED,shouldShowRequestPermissionRationale(permissions[i])));
@@ -97,16 +98,20 @@ public class KPermissionFragment extends Fragment {
     }
 
     /**
-     * 请求多个权限，只要有一个权限被拒绝且选中了【不在询问】，此方法都会返回false，否则返回true
+     * 请求多个权限，只要有一个权限被拒绝且没有选中【不在询问】，此方法都会返回true，否则返回false
      * @param permissions
      * @return
      */
 
-    boolean shouldShowRequestPermission(String[] permissions){
-        for (String permission : permissions) {
-            if (!shouldShowRequestPermissionRationale(permission)) return false;
+    boolean shouldShowRequestPermission(String[] permissions,boolean isAllGrant){
+        if (isAllGrant){
+            return false;
+        }else {
+            for (String permission : permissions) {
+                if (shouldShowRequestPermissionRationale(permission)) return true;
+            }
         }
-        return true;
+        return false;
     }
 
 

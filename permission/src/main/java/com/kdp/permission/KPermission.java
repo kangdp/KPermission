@@ -62,7 +62,7 @@ public class KPermission {
                 kPermissionFragment.requestPermissions(permissionsCallback);
             }else {
                 String[] permissions = kPermissionFragment.getPermissions();
-                permissionsCallback.onResult(new Permission(Arrays.toString(permissions),true,kPermissionFragment.shouldShowRequestPermission(permissions)));
+                permissionsCallback.onResult(new Permission(Arrays.toString(permissions),true,kPermissionFragment.shouldShowRequestPermission(permissions,true)));
             }
         }else {
             kPermissionFragment.requestPermissions(permissionsCallback);
