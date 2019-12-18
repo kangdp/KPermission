@@ -28,6 +28,5 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-//    implementation project(path: ':permission')
-    implementation 'com.kdp:permission:1.1.1'
+    implementation project(path: ':permission')
 }

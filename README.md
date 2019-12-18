@@ -4,7 +4,7 @@
 ## 添加依赖
     implementation 'com.kdp:permission:1.0.0'
 ## 从1.1.0版本开始支持Androidx
-    implementation 'com.kdp:permission:1.1.1'
+    implementation 'com.kdp:permission:1.1.0'
 ## 简单使用
 
 - 请求单个或多个权限并返回请求结果
@@ -69,7 +69,7 @@
 
 ## 混淆
 
-    -keep class com.kdp.permission.**{*;}
+    -keep class com.kdp.permission.Permission { *; }
 
 ## LICENSE
 
