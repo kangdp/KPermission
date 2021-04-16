@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.dcendents.android-maven'    // 添加本行
+      group='com.github.kangdp'    // 添加本行
 
 
 publish {
