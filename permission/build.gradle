@@ -1,11 +1,11 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-
-def buildBintrayPro() {
-    def buildProperties = new Properties()
-    buildProperties.load(new FileInputStream(file("../local.properties")))
-    return buildProperties
+ext {
+    PUBLISH_ARTIFACT_ID = "permission" //你的artifact_id，一般是module的名字
+    PUBLISH_VERSION = "1.1.0"  //发布版本号
+    PUBLISH_GROUP_ID = 'io.github.kangdp'  //你的sonatype的group_id
 }
+apply from: '../publish-mavencentral.gradle'
+
 android {
     compileSdkVersion rootProject.compileSdkVersion
 
