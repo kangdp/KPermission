@@ -3,7 +3,7 @@
 
 ## 添加依赖
     implementation 'com.kdp:permission:1.0.0'
-## 从1.1.0版本开始支持Androidx
+## 从1.1.0版本开始支持Androidx，并将库从jcenter迁移至mavenCentral
     implementation 'io.github.kangdp:permission:1.1.0'
 ## 简单使用
 
